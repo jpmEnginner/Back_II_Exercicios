@@ -93,9 +93,11 @@ topico01/
    - ID: `phproberto.vscode-php-getters-setters`
    - Instalação: `ext install phproberto.vscode-php-getters-setters`
 
-## 🤖 Versionamento de Código
+6. **LARAPHENSE** - IntelliSense específico para Laravel
+   - ID: `ryannaddy.laravel-artisan`
+   - Instalação: `ext install ryannaddy.laravel-artisan`
 
-### Git
+## 🤖 Versionamento de Código### Git
 
   * **Git vs SVN**: [Link](https://prof-gillgonzales-ifsul.notion.site/SVN-vs-GIT-2551037386bf80a4b26ec69429777850)
   * **Tutorial de Instalação do Git no Windows**: [Link](https://dicasdeprogramacao.com.br/como-instalar-o-git-no-windows/)
@@ -115,23 +117,10 @@ git config core.sshCommand 'ssh -o IdentitiesOnly=yes -i ~/.ssh/NOME_DA_CHAVE -F
 #### Instalação e Configuração
 > **Nota para Windows:** Use a opção HTTPS "Windows Secure Channel library"
 
-### Tutoriais Git
-* **Versionamento**: [Link](https://nodejs.org/en/download)
-* **Git vs SVN**: [Link](https://nodejs.org/en/download)
-* **Tutorial Instalação Git no Windows**: [Link](https://nodejs.org/en/download)
-* **Instalação do Git no Windows**: [Link](https://nodejs.org/en/download)
-* **Git e Github criação de projetos**: [Link](https://nodejs.org/en/download)
-* **Git e GitLab - Criação de Projeto**: [Link](https://nodejs.org/en/download)
-
-### Recursos Avançados
-* **Git por Linus Torvalds seu criador**: [Link](https://nodejs.org/en/download)
-* **Git para iniciantes**: [Link](https://nodejs.org/en/download)
-* **Pro Git - Livro Gratuito**: [Link](https://nodejs.org/en/download)
-
-## 🗄️ Banco de Dados
+<!-- ## 🗄️ Banco de Dados com Docker
 
 ### MySQL e phpMyAdmin
-* **phpmyAdminMysqlDockerCompose**: [Link](https://nodejs.org/en/download)
+* **phpmyAdminMysqlDockerCompose**: [Link](https://nodejs.org/en/download) -->
 
 
 ---
