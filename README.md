@@ -1,5 +1,5 @@
 # 📚 Desenvolvimento Back-End 2 - PHP Laravel
-## Curso Superior de Tecnologia em Sistemas para Internet - 2025.02
+## IFSUL - Curso Superior de Tecnologia em Sistemas para Internet - 2025.02
 
 Este repositório contém os materiais e exemplos práticos da disciplina de Desenvolvimento de Back-End 2, focada em PHP e Laravel.
 
