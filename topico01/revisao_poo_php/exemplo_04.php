@@ -13,7 +13,7 @@ class Pessoa {
 
 	function __destruct()
 	{
-		echo "\n$this->nome foi destruído!!";
+		echo "\n$this->nome foi destruído!!\n";
 	}
 }
 
@@ -22,7 +22,7 @@ $pessoaDois = new Pessoa("Vera",60,1.55,89);
 
 $pessoaTres = new Pessoa('Fulano',24);
 var_dump($pessoaTres);
-die;
-$pessoaTres = null;
+// die;
+$pessoaTres = null;//chamar o __destruct
 
 var_dump($pessoaUm, $pessoaDois);

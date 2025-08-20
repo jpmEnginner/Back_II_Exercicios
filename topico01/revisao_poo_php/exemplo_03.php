@@ -3,8 +3,9 @@
 class Pessoa {
 	public $nome, $idade, $altura, $peso;
 
-	function __construct($nome, $idade, $altura=0, $peso=0)
+	function __construct($nome, $idade, $altura=0, $peso=null)
 	{
+		print_r(self::class."\n");
 		$this->nome = $nome;
 		$this->idade = $idade;
 		$this->peso = $peso;
