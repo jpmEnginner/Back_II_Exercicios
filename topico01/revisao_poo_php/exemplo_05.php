@@ -30,10 +30,10 @@ class Pessoa {
 		return $this->imc;
 	}
 
-	// function __get($nomeAtributo){//imc
-	// 	var_dump($nomeAtributo);
-	// 	return $this->$nomeAtributo; //imc ($this->imc)
-	// }
+	function __get($nomeAtributo){//imc
+		var_dump($nomeAtributo);
+		return $this->$nomeAtributo; //imc ($this->imc)
+	}
 
 	function setPeso(float $peso): void
 	{
@@ -55,8 +55,11 @@ $pessoaUm->setPeso(68);
 $pessoaUm->calcIMC();
 $pessoaDois->calcIMC();
 
+
 echo "\nO IMC do $pessoaDois->nome eh ".number_format($pessoaDois->getImc(),2)." \n";
 
 echo "\nIMC do $pessoaUm->nome: ".number_format($pessoaUm->getImc(),2)."\n";
+
+echo "$pessoaUm->nome possui $pessoaUm->peso kg e $pessoaUm->altura m de altura com $pessoaUm->imc IMC\n";
 
 var_dump($pessoaUm, $pessoaDois);
