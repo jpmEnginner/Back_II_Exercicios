@@ -73,12 +73,15 @@ class Professor extends Funcionario
 	public function areaAtuacao()
 	{
 		echo "\nAtua na área: " . $this->area;
-        echo "\n Seu imc é:".$this->imc;
+	}
+
+	public function verImc(){
+		   echo "\n O imc do Professor $this->nome é:".$this->imc;
 	}
 }
 
 $pessoaUm = new Pessoa("Joao", 35);
-$pessoaDois = new Pessoa("Lucia", 60, 1.55, 89);
+$pessoaDois = new Funcionario("Lucia", 60, 1.55, 89, 3000);
 
 
 $pessoaUm->calcImc();
@@ -88,6 +91,7 @@ $pessoaTres = new Professor('Gill', 35, 1.55, 89, 5000);
 $pessoaTres->calcImc(); //Pessoa
 $pessoaTres->verSalario(); //Funcionario
 $pessoaTres->areaAtuacao(); //Professor
+$pessoaTres->verImc(); //Professor
 
 
 
