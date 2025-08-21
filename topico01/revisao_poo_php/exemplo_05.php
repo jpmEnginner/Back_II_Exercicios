@@ -6,8 +6,8 @@ class Pessoa {
 	function __construct(
 		public string $nome,
 		public int $idade,
-		public float $peso = 0,
-		public float $altura = 0,
+		protected float $peso = 0,
+		protected float $altura = 0,
 	) {
 		echo "\nObjeto $this->nome construído!!!";
 	}
@@ -34,10 +34,23 @@ class Pessoa {
 	// 	var_dump($nomeAtributo);
 	// 	return $this->$nomeAtributo; //imc ($this->imc)
 	// }
+
+	function setPeso(float $peso): void
+	{
+		$this->peso = $peso;
+	}
+
+	function setAltura(float $altura): void
+	{
+		$this->altura = $altura;
+	}
 }
 
 $pessoaUm = new Pessoa("Gill",36);
 $pessoaDois = new Pessoa("Vera",60,89,1.55);
+
+$pessoaUm->setAltura(1.75); //protected
+$pessoaUm->setPeso(68);
 
 $pessoaUm->calcIMC();
 $pessoaDois->calcIMC();
