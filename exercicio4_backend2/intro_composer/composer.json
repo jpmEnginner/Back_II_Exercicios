@@ -19,5 +19,8 @@
             "name": "Joao Pedro",
             "email": "joaomoraes.pl039@academico.ifsul.edu.br"
         }
-    ]
+    ],
+    "scripts": {
+        "start": "php -S localhost:8090 -t src"
+    }
 }
