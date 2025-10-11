@@ -60,11 +60,6 @@ use Jpm\IntroComposer\classes\Atleta;
 $atleta = new Atleta("João Silva", 25, 1.75, 60);
 echo $atleta;
 
-
-
-
-
-
 // echo __DIR__;
 // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__."/../");
 //$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
