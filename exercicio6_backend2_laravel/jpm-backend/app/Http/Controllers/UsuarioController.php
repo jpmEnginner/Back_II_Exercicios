@@ -54,7 +54,7 @@ class UsuarioController extends Controller
         Usuario::create($validatedData);
 
         return redirect()->route('usuarios.index')
-                         ->with('success', 'Usuário criado com sucesso!');
+            ->with('success', 'Usuário criado com sucesso!');
     }
 
     // ===== UPDATE (MOSTRAR FORMULÁRIO DE EDIÇÃO) =====
@@ -98,16 +98,23 @@ class UsuarioController extends Controller
         $usuario->update($validatedData);
 
         return redirect()->route('usuarios.index')
-                         ->with('success', 'Usuário atualizado com sucesso!');
+            ->with('success', 'Usuário atualizado com sucesso!');
     }
 
     // ===== DELETE (DELETAR) =====
+
+    public function confirmDelete($id) //metodo para confirmar o delete
+    {
+        $usuario = Usuario::findOrFail($id);
+        return view('usuarios.delete', compact('usuario'));
+    }
+
     public function destroy($id)
     {
         $usuario = Usuario::findOrFail($id);
         $usuario->delete();
 
         return redirect()->route('usuarios.index')
-                         ->with('success', 'Usuário deletado com sucesso!');
+            ->with('success', 'Usuário deletado com sucesso!');
     }
 }

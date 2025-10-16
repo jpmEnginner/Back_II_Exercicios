@@ -46,7 +46,7 @@ class AutomovelController extends Controller
         Automovel::create($validatedData);
 
         return redirect()->route('automoveis.index')
-                         ->with('success', 'Automóvel criado com sucesso!');
+            ->with('success', 'Automóvel criado com sucesso!');
     }
 
     // ===== UPDATE (MOSTRAR FORMULÁRIO DE EDIÇÃO) =====
@@ -76,16 +76,27 @@ class AutomovelController extends Controller
         $automovel->update($validatedData);
 
         return redirect()->route('automoveis.index')
-                         ->with('success', 'Automóvel atualizado com sucesso!');
+            ->with('success', 'Automóvel atualizado com sucesso!');
     }
 
     // ===== DELETE (DELETAR) =====
+
+    public function confirmDelete($id) //confirmacao do delete
+    {
+        $automovel = Automovel::findOrFail($id);
+        return view('automoveis.delete', compact('automovel'));
+    }
+
+
     public function destroy($id)
     {
         $automovel = Automovel::findOrFail($id);
         $automovel->delete();
 
         return redirect()->route('automoveis.index')
-                         ->with('success', 'Automóvel deletado com sucesso!');
+            ->with('success', 'Automóvel deletado com sucesso!');
     }
+
+
+
 }

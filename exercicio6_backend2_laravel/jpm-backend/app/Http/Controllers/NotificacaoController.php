@@ -42,7 +42,7 @@ class NotificacaoController extends Controller
         Notificacao::create($validatedData);
 
         return redirect()->route('notificacoes.index')
-                         ->with('success', 'Notificação criada com sucesso!');
+            ->with('success', 'Notificação criada com sucesso!');
     }
 
     // ===== UPDATE (MOSTRAR FORMULÁRIO DE EDIÇÃO) =====
@@ -68,16 +68,22 @@ class NotificacaoController extends Controller
         $notificacao->update($validatedData);
 
         return redirect()->route('notificacoes.index')
-                         ->with('success', 'Notificação atualizada com sucesso!');
+            ->with('success', 'Notificação atualizada com sucesso!');
     }
 
     // ===== DELETE (DELETAR) =====
+    public function confirmDelete($id) //tela para confirmar a deletagem
+    {
+        $notificacao = Notificacao::findOrFail($id);
+        return view('notificacoes.delete', compact('notificacao'));
+    }
+
     public function destroy($id)
     {
         $notificacao = Notificacao::findOrFail($id);
         $notificacao->delete();
 
         return redirect()->route('notificacoes.index')
-                         ->with('success', 'Notificação deletada com sucesso!');
+            ->with('success', 'Notificação deletada com sucesso!');
     }
 }
